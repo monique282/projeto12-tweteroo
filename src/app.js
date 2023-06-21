@@ -9,7 +9,7 @@ const port = 5000;
 app.listen(port , ()=> console.log(`servidor esta rodando na porta ${port}`));
 
 
-app.get("/Mundo", (req, res) => {
+app.get("/", (req, res) => {
     const usuario = [
         {
             username: 'bobesponja', 
