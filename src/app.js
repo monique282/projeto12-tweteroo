@@ -30,7 +30,7 @@ app.get('/tweets', (req, res) => {
 });
 
 // aqui vai ser pra pegar um abjeto especifico usando o id
-app.get('/tweets/:id', (req, res) => {
+app.get('/tweets/:username', (req, res) => {
     const { id } = req.params;
 
     const publi = tweets.find((pu) => pu.id === Number(id));
