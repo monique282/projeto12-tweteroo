@@ -40,6 +40,13 @@ app.get('/tweets/:id', (req, res) => {
 //é aqui aonde euvou enviar novas receitas para o meu servidor
 app.post("/tweets", (req, res) => {
 
+    // ferificando se o usuario esta cadastrado 
+    const usuarioExixte = usuario.find((user) => user.username === username);
+    if (!usuarioExixte) {
+        // Retorna a mensagem de "UNAUTHORIZED" se o usuário não estiver cadastrado
+        return res.send("UNAUTHORIZED");
+    }
+
     const novo = {
         username: req.body.username,
         avatar: req.body.avatar,
