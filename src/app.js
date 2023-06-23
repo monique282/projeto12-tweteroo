@@ -39,7 +39,7 @@ app.get('/tweets/:username', (req, res) => {
 
 //é aqui aonde euvou enviar novas receitas para o meu servidor
 app.post("/tweets", (req, res) => {
-
+    const { username } = req.body;
     // ferificando se o usuario esta cadastrado 
     const usuarioExixte = usuario.find((user) => user.username === username);
     if (!usuarioExixte) {
