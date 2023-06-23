@@ -9,39 +9,8 @@ const port = 5000;
 // cerve pra deixar a aplicação ligada na porta escolhida
 app.listen(port, () => console.log(`servidor esta rodando na porta ${port}`));
 
-// aqui esta todos os objetos que eu quero que esteja no sevidor
-let tweets = [{
-    username1: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-},
-{
-    username2: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}, {
-    username3: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}, {
-    username4: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}, {
-    username5: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}, {
-    username6: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}, {
-    id: 7,
-    username7: "bobesponja",
-    avatar: "https://cdn.shopify.com/s/files/1/0150/0643/3380/files/Screen_Shot_2019-07-01_at_11.35.42_AM_370x230@2x.png",
-    tweet: "Eu amo hambúrguer de siri!"
-}
-];
+// aqui esta o array do tweets
+let tweets = [];
 // array aonde irei colocar os usuarios
 let usuario = [];
 
