@@ -22,11 +22,26 @@ app.get('/tweets', (req, res) => {
         return res.send([]);
     }
 
+    let listaTweets = [];
+
     // Aqui ele pega somente os 10 primerios cadastrados
-    const lastTenTweets = tweets.slice(0, 10); // Obtém apenas os 10 primeiros tweets da lista
+    listaTweets = tweets.slice(0, 10); // Obtém apenas os 10 primeiros tweets da lista
+
+listaTweets = listaTweets.map((tweet) => {
+    const usuar = usuario.find((usuar) => usuar.username === tweet.username);
+    if(usuar){
+        return{
+            ...tweet,
+            avatar: usuar.avatar,
+        };
+    }
+    return tweet;
+});
 
     // Responde com os tweets mais recentes
-    res.send(lastTenTweets);
+    res.send(listaTweets);
+
+
 });
 
 // aqui vai ser pra pegar um abjeto especifico usando o id
