@@ -24,8 +24,15 @@ app.get('/tweets', (req, res) => {
 
     let listaTweets = [];
 
+    if(tweets.length>10){
+        listaTweets = tweets.slice(tweets.length - 10); // Obtém apenas os 10 ultimos tweets da lista
+
+    }
+    else {
+        listaTweets = tweets.slice();
+        
+    }
     // Aqui ele pega somente os 10 primerios cadastrados
-    listaTweets = tweets.slice(0, 10); // Obtém apenas os 10 primeiros tweets da lista
 
 listaTweets = listaTweets.map((tweet) => {
     const usuar = usuario.find((usuar) => usuar.username === tweet.username);
